@@ -1,0 +1,6 @@
+{
+  "name": "Kjølemate kjæledyr",
+  "description": "Minimalist e-commerce landing page for a premium dog cooling mat, featuring Google Auth and Stripe payments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

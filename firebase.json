@@ -1,0 +1,23 @@
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "hosting": {
+    "site": "gen-lang-client-0610749770",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "run": {
+          "serviceId": "ais-pre-fasdnhlqt2zminadxkij2k-332974258325",
+          "region": "europe-west2"
+        }
+      }
+    ]
+  }
+}

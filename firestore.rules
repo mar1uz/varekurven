@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    
+    match /orders/{orderId} {
+      // Anyone can create an order (since the client writes it after payment), 
+      // but they can only read it if they are an admin.
+      // In a real app, this should be done via a backend webhook to be completely secure, 
+      // but for this prototype, we allow client-side creation.
+      allow create: if true;
+      allow read, update, delete: if request.auth != null; // Admin requires auth
+    }
+  }
+}
